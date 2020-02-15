@@ -1,0 +1,23 @@
+/*cor link navbar*/
+.navbar-nav > li > a{
+    background-color: #f8f9fa;
+}
+/*cor link navbar hover*/
+.navbar-nav > li > a:hover{
+    background-color: #eff0f1;
+}
+/*colunas conteúdo*/
+.titulo-coluna{
+    width: 50%;
+}
+.data-coluna{
+    width: 40%;
+}
+.atualiza-coluna{
+    width: 5%;
+    text-align: center;
+}
+.deleta-coluna{
+    width: 5%;
+    text-align: center;
+}

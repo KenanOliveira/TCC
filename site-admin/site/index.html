@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-controller="gerenciarCtrl" ng-app="site" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="vendors/open-iconic/font/css/open-iconic-bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#!/gerenciar">
+            <img class="img-logo" src="img/logo-extra.png" alt="logo">
+        </a>
+        <!-- Links -->
+        <ul ng-hide="logado()" class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link bordered" href="#!/inserir">Novo Vídeo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#!/registrar">Cadastrar Usuário</a>
+            </li>
+        </ul>
+        <div ng-hide="logado()" class="collapse navbar-collapse justify-content-end">
+            <ul ng-hide="logado()" class="navbar-nav">
+                <li class="nav-item">
+                    <p class="nav-link" style="color: black;" ng-show="nome">Bem vindo(a), {{nome}}</p>
+                </li>
+                <li class="nav-item">
+                    <p ng-click="logout()" class="nav-link oi oi-account-logout"></p>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div ng-view></div>
+    <script src="vendors/angular/angular.js"></script>
+    <script src="vendors/angular-sanitize/angular-sanitize.js"></script>
+    <script src="vendors/angular-route/angular-route.js"></script>
+    <script src="vendors/ngstorage/ngStorage.js"></script>
+    <script src="js/rotas.js"></script>
+    <script src="js/controllers/gerenciar.js"></script>
+    <script src="js/controllers/inserir.js"></script>
+    <script src="js/controllers/atualizar.js"></script>
+    <script src="js/controllers/ctrlUser.js"></script>
+</body>
+</html>

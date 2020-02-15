@@ -1,0 +1,25 @@
+<title>Novo vídeo</title>
+<br>
+<div ng-show="sucesso" class="alert alert-success" style="height: 50px;"><p>{{sucesso}}</p></div>
+<div ng-show="alerta" class="alert alert-warning" style="height: 50px;"><p>{{alerta}}</p></div>
+<form ng-submit="inserirVideo()">
+    <div class="form-group">
+        <label>Título</label>
+        <input type="text" ng-model="titulo" class="form-control" placeholder="Título aqui" required>
+    </div>
+    <div class="form-group">
+        <label>Link</label>
+        <input type="text" ng-model="link" class="form-control" placeholder="Link aqui" required>
+        <small class="form-text text-muted">Ex. youtube.com/</small>
+    </div>
+    <div class="form-group">
+        <label>Descrição</label>
+        <input type="text" ng-model="desc" class="form-control" placeholder="Descrição do vídeo">
+    </div>
+    <div class="form-group">
+        <label>Tags</label>
+        <input type="text" ng-model="tags" class="form-control" placeholder="Tags aqui" required>
+        <small class="form-text text-muted">Ex: divisao celular, mitose</small>
+    </div>
+    <button type="submit" class="btn btn-default">Adicionar</button>
+</form>

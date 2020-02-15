@@ -1,0 +1,39 @@
+<title ng-init="carregaVideos()">Gerenciar</title>
+<br>
+<span ng-show="erroConexao">{{erroConexao}}</span>
+<br ng-init="verificaData()">
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th colspan="4" style="background-color:rgba(0, 0, 0, 0.7)"><span ng-show="videosCad">{{videosCad}}</span></th>
+        </tr>
+        <tr>
+            <th scope="col" class="titulo-coluna">Título</th>
+            <th scope="col" class="data-coluna">Publicado</th>
+            <th scope="col" class="atualiza-coluna">Atualizar</th>
+            <th scope="col" class="deleta-coluna">Excluir</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-hide="conteudo()">
+            <td colspan="4" class="text-center" ng-show="semConteudo">{{semConteudo}}</td>
+        </tr>
+        <tr ng-repeat="v in videos">
+            <td>{{v.titulo}}</td>
+            <td>{{v.dataPublicacao | date:"dd/MM/yyyy HH:mm:ss"}}</td>
+            <td><center><button ng-click="deletaVideo(v._id)" class="btn btn-link oi oi-trash"></button></center></td>
+            <td><center><button ng-click="atualizar(v._id)" class="btn btn-link oi oi-pencil"></button></center></td>
+        </tr>
+    </tbody>
+    <tfoot ng-hide="esconde()">
+        <tr>
+            <td colspan="4">
+                <div class="btn btn-group" role="group">
+                    <button type="button" ng-click="anterior()" class="btn btn-secondary">Anterior</button>
+                    <button type="button" class="btn btn-secondary disabled" ng-show="nPagina">{{nPagina}}</button>
+                    <button type="button" ng-click="proximo()" class="btn btn-secondary">Próximo</button>
+                </div>
+            </td>
+        </tr>
+    </tfoot>
+</table>

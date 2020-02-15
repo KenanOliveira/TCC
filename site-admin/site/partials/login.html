@@ -1,0 +1,19 @@
+<title>Login</title>
+<form style="width: 60%; margin: auto;" ng-submit="authUsuario()">
+    <center><p class="oi oi-person"></p></center>
+    <div class="form-group">
+        <input type="text" class="form-control" ng-model="user" placeholder="Usuário">
+        <small class="form-text text-muted">Use o usuário para entrar no site</small>
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" ng-model="pwd" placeholder="Senha">
+        <small class="form-text text-muted">Lembre-se da sua senha</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+<br>
+<div style="margin: auto; width: 60%; text-align: center;">
+    <p ng-show="erro" class="alert alert-danger">{{erro}}</p>
+    <p ng-show="sucesso" class="alert alert-success">{{sucesso}}</p>
+    <p ng-show="alerta" class="alert alert-warning">{{alerta}}</p>
+</div>
