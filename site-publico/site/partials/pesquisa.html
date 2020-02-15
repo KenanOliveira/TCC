@@ -1,0 +1,24 @@
+<title>{{titulo}} - BDAAZ</title>
+<br>
+<p>{{resultados}}</p>
+<div style="height: fit-content;">
+<table class="table" id="tabela">
+    <tbody>
+        <tr ng-repeat="v in videos">
+            <td class="td-thumbnail"><a href="#!/assistir/{{v._id}}"><img class="img-thumbnail" ng-src="{{v.linkImagem}}"></a></th>
+            <td><a href="#!/assistir/{{v._id}}">{{v.titulo}}</a><br><small class="text-muted">{{v.descricao}}</small></td>
+        </tr>
+    </tbody>
+    <tfoot ng-hide="ctrlPaginas()">
+        <tr>
+            <td colspan="2">
+                <div class="btn-group" role="group">
+                    <button type="button" ng-click="anterior()" class="btn btn-secondary">Anterior</button>
+                    <button type="button" class="btn btn-secondary disabled" ng-show="pagina">{{pagina}}</button>
+                    <button type="button" ng-click="proximo()" class="btn btn-secondary">Próximo</button>
+                </div>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+</div>

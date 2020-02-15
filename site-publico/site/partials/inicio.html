@@ -1,0 +1,10 @@
+<title>Início</title>
+<br>
+<div class="card-group" ng-init="carregaVideos()">
+    <div class="card" ng-repeat="v in videos">
+        <a href="#!/assistir/{{v._id}}"><img class="card-img" ng-src="{{v.linkImagem}}" alt="{{v.titulo}}"></a>
+        <div class="card-body">
+            <h5 class="card-title"><a class="titulo-inicio" href="#!/assistir/{{v._id}}">{{v.titulo}}</a></h5>
+        </div>
+    </div>
+</div>

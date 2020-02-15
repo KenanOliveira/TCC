@@ -1,0 +1,43 @@
+/*Cor links*/
+a{
+    color: black;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+/*Imagem e objeto td PESQUISA*/
+.img-thumbnail{
+    width: 200px;
+    height: 120px;
+}
+.td-thumbnail{
+    width: 200px;
+}
+/*Tamanho fonte tela início*/
+@media(max-width: 780px){
+    .titulo-inicio{
+        font-size: 18px;
+    }
+    .navbar-text{
+        font-size: 12px;
+    }
+    .footer-img{
+        width: 20px;
+        height: 20px;
+    }
+}
+/*Rodapé*/
+.footer-img{
+    width: 40px;
+    height: 40px;
+}
+/*espaco icone youtube*/
+.espaco{
+    margin-left: 20px;
+}
+/*Imagem card inicio*/
+.card-img{
+    width: 94%;
+    margin-left: 3%;
+}
